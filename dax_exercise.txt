@@ -1,0 +1,38 @@
+
+DAX Exercise: Sales Analysis
+
+1. Calculated Columns
+---------------------
+a. Discount Amount
+   Discount Amount = 'Sales'[Extended Amount] * 'Sales'[Unit Price Discount Pct]
+
+b. Profit
+   Profit = 'Sales'[Sales Amount] - 'Sales'[Total Product Cost]
+
+c. Days to Ship
+   Days to Ship = DATEDIFF('Sales'[ShipDateKey], 'Sales'[SalesDueDateKey], DAY)
+
+2. DAX Measures
+---------------
+a. Total Sales
+   Total Sales = SUM('Sales'[Sales Amount])
+
+b. Total Profit
+   Total Profit = SUM('Sales'[Profit])
+
+c. Average Discount Percentage
+   Avg Discount % = AVERAGE('Sales'[Unit Price Discount Pct])
+
+d. Sales in a Specific Territory (e.g., Territory 5)
+   Sales Territory 5 = CALCULATE([Total Sales], 'Sales'[SalesTerritoryKey] = 5)
+
+e. Sales with High Discount (> 0.5)
+   High Discount Sales = CALCULATE([Total Sales], FILTER('Sales', 'Sales'[Unit Price Discount Pct] > 0.5))
+
+3. Practice Questions
+---------------------
+1. Create a calculated column to find the profit margin for each sale.
+2. Write a measure to calculate total sales for FY2018 Q1.
+3. Create a visual showing sales by product category.
+4. Find the average shipping time using the Days to Ship column.
+5. Use CALCULATE to find total profit for a specific reseller.
