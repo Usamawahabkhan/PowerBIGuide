@@ -1,0 +1,9 @@
+FlagURL = 
+SWITCH(
+    AllData[Country],
+    "Australia", "https://flagcdn.com/w320/au.png",
+    "UK",        "https://flagcdn.com/w320/gb.png",
+    "Germany",   "https://flagcdn.com/w320/de.png",
+    "France",    "https://flagcdn.com/w320/fr.png",
+    BLANK()
+)
