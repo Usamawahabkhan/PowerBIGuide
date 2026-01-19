@@ -9,3 +9,31 @@ https://learn.microsoft.com/en-us/training/courses/pl-300t00
   else if [Country] = "France" then "https://www.countryflags.com/wp-content/uploads/france-flag-png-large.png"
   else if [Country] = "Germany" then "https://www.countryflags.com/wp-content/uploads/germany-flag-png-large.png"
   else null
+
+
+
+MOC-GCHUDEKZM	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-gchudekzm	FALSE
+MOC-GJK979KC2	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-gjk979kc2	FALSE
+MOC-LAJD6Q8QA	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-lajd6q8qa	FALSE
+MOC-77N5DTR7W	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-77n5dtr7w	FALSE
+MOC-3LD69HAN8	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-3ld69han8	FALSE
+MOC-GRMB6EAK4	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-grmb6eak4	FALSE
+MOC-LBG3WXDM4	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-lbg3wxdm4	FALSE
+MOC-8ME2R9NS2	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-8me2r9ns2	FALSE
+MOC-XPBBDSS29	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-xpbbdss29	FALSE
+MOC-X6AH54ZG5	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-x6ah54zg5	FALSE
+MOC-PAYQ3WNBA	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-payq3wnba	FALSE
+MOC-3QANXNPM6	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-3qanxnpm6	FALSE
+MOC-3J8YJ6YQQ	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-3j8yj6yqq	FALSE
+MOC-32SMAKD9R	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-32smakd9r	FALSE
+MOC-CHXPXBRZL	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-chxpxbrzl	FALSE
+MOC-9KHX4R878	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-9khx4r878	FALSE
+MOC-7Z243LEUL	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-7z243leul	FALSE
+MOC-SQPZJY6ME	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-sqpzjy6me	FALSE
+MOC-HNU7HSTYG	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-hnu7hstyg	FALSE
+MOC-JE8ANDMHJ	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-je8andmhj	FALSE
+MOC-2JQMJC28K	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-2jqmjc28k	FALSE
+MOC-7JBT2QMZT	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-7jbt2qmzt	FALSE
+MOC-MARHKCE7Q	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-marhkce7q	FALSE
+MOC-MRBKNBPEC	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-mrbknbpec	FALSE
+MOC-Z6DSGKJXQ	https://labs.xtremelabs.io/RedeemCode/Redeem?ap=MyLabs&code=moc-z6dsgkjxq	FALSE
