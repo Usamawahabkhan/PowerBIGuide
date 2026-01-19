@@ -1,1 +1,11 @@
 https://learn.microsoft.com/en-us/training/courses/pl-300t00
+
+
+
+
+
+= if [Country] = "Australia" then "https://www.countryflags.com/wp-content/uploads/flag-jpg-xl-9-scaled.jpg"
+  else if [Country] = "UK" then "https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png"
+  else if [Country] = "France" then "https://www.countryflags.com/wp-content/uploads/france-flag-png-large.png"
+  else if [Country] = "Germany" then "https://www.countryflags.com/wp-content/uploads/germany-flag-png-large.png"
+  else null
