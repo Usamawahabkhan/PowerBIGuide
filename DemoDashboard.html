@@ -1,131 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Omani Investment Dashboard</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
-    .tabs { display: flex; background: #004d40; }
-    .tabs button {
-      flex: 1; padding: 14px; border: none; background: #004d40; color: white;
-      cursor: pointer; font-weight: bold;
-    }
-    .tabs button.active { background: #00796b; }
-    .tab-content { display: none; padding: 20px; }
-    .tab-content.active { display: block; }
-    canvas { max-width: 800px; margin: 20px auto; display: block; }
-  </style>
-</head>
-<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usama Wahab Khan | AI MVP Profile</title>
 
-<div class="tabs">
-  <button class="tablink active" onclick="openTab(event,'overview')">Portfolio Overview</button>
-  <button class="tablink" onclick="openTab(event,'direct')">Direct Investment</button>
-  <button class="tablink" onclick="openTab(event,'realestate')">Real Estate</button>
-  <button class="tablink" onclick="openTab(event,'public')">Public Market</button>
-  <button class="tablink" onclick="openTab(event,'bonds')">Bonds</button>
-  <button class="tablink" onclick="openTab(event,'islamic')">Islamic Instruments</button>
-</div>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<!-- Portfolio Overview -->
-<div id="overview" class="tab-content active">
-  <h2>Portfolio Overview</h2>
-  <canvas id="overviewChart"></canvas>
-</div>
-
-<!-- Direct Investment -->
-<div id="direct" class="tab-content">
-  <h2>Direct Investment KPIs</h2>
-  <canvas id="directChart"></canvas>
-</div>
-
-<!-- Real Estate -->
-<div id="realestate" class="tab-content">
-  <h2>Real Estate KPIs</h2>
-  <canvas id="realEstateChart"></canvas>
-</div>
-
-<!-- Public Market -->
-<div id="public" class="tab-content">
-  <h2>Public Market KPIs</h2>
-  <canvas id="publicChart"></canvas>
-</div>
-
-<!-- Bonds -->
-<div id="bonds" class="tab-content">
-  <h2>Bonds KPIs</h2>
-  <canvas id="bondsChart"></canvas>
-</div>
-
-<!-- Islamic Instruments -->
-<div id="islamic" class="tab-content">
-  <h2>Islamic Instruments KPIs</h2>
-  <canvas id="islamicChart"></canvas>
-</div>
-
-<script>
-function openTab(evt, tabName) {
-  const contents = document.querySelectorAll('.tab-content');
-  const links = document.querySelectorAll('.tablink');
-  contents.forEach(c => c.classList.remove('active'));
-  links.forEach(l => l.classList.remove('active'));
-  document.getElementById(tabName).classList.add('active');
-  evt.currentTarget.classList.add('active');
+<style>
+body {
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#0a0f1c;
+    color:white;
+    overflow-x:hidden;
 }
 
-// Portfolio Overview Pie
-new Chart(document.getElementById('overviewChart'), {
-  type: 'pie',
-  data: {
-    labels: ['Direct Investment','Real Estate','Public Market','Bonds','Islamic Instruments'],
-    datasets: [{ data: [25,20,30,15,10], backgroundColor: ['#00796b','#43a047','#1e88e5','#fbc02d','#8e24aa'] }]
-  }
-});
+/* NAV */
+nav {
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.6);
+    padding:15px;
+    text-align:center;
+    z-index:1000;
+}
 
-// Direct Investment Bar
-new Chart(document.getElementById('directChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Energy','Logistics','Food','Tech'],
-    datasets: [{ label: 'ROI %', data: [12,8,15,20], backgroundColor: '#00796b' }]
-  }
-});
+nav a {
+    color:#00f7ff;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-// Real Estate Line
-new Chart(document.getElementById('realEstateChart'), {
-  type: 'line',
-  data: {
-    labels: ['2021','2022','2023','2024','2025'],
-    datasets: [{ label: 'Rental Yield %', data: [6,6.5,7,7.2,7.5], borderColor: '#43a047', fill: false }]
-  }
-});
+/* HERO */
+.hero {
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+    background:linear-gradient(135deg,#0a0f1c,#111f3a);
+}
 
-// Public Market Line
-new Chart(document.getElementById('publicChart'), {
-  type: 'line',
-  data: {
-    labels: ['MSM30','Banking','Industrial','Services'],
-    datasets: [{ label: 'Index Growth %', data: [5,8,3,6], borderColor: '#1e88e5', fill: false }]
-  }
-});
+.hero img {
+    width:150px;
+    border-radius:50%;
+    border:4px solid #00f7ff;
+    animation: float 4s ease-in-out infinite;
+}
 
-// Bonds Maturity Ladder
-new Chart(document.getElementById('bondsChart'), {
-  type: 'bar',
-  data: {
-    labels: ['2026','2027','2028','2029','2030'],
-    datasets: [{ label: 'Bond Value (M OMR)', data: [50,70,40,60,30], backgroundColor: '#fbc02d' }]
-  }
-});
+@keyframes float {
+    0%,100% { transform: translateY(0);}
+    50% { transform: translateY(-10px);}
+}
 
-// Islamic Instruments
-new Chart(document.getElementById('islamicChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Sukuk A','Sukuk B','Sukuk C'],
-    datasets: [{ label: 'Profit Rate %', data: [4.5,5.2,4.8], backgroundColor: '#8e24aa' }]
-  }
+.hero h1 {
+    font-size:40px;
+    margin:20px 0;
+}
+
+.hero p {
+    color:#aaa;
+}
+
+/* SECTION */
+section {
+    padding:80px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+h2 {
+    color:#00f7ff;
+    margin-bottom:20px;
+}
+
+/* COUNTERS */
+.counters {
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+}
+
+.counter {
+    font-size:40px;
+    color:#00f7ff;
+}
+
+/* GRID */
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* CARDS */
+.card {
+    background:#111;
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:scale(1.05);
+    box-shadow:0 0 20px #00f7ff;
+}
+
+/* LOGOS */
+.logos img {
+    width:80px;
+    margin:10px;
+    filter:grayscale(1);
+    transition:0.3s;
+}
+
+.logos img:hover {
+    filter:none;
+    transform:scale(1.2);
+}
+
+/* TIMELINE */
+.timeline {
+    border-left:3px solid #00f7ff;
+    padding-left:20px;
+}
+
+.timeline div {
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+footer {
+    text-align:center;
+    padding:30px;
+    background:#000;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#about">About</a>
+<a href="#stats">Impact</a>
+<a href="#projects">Projects</a>
+<a href="#certs">Certifications</a>
+<a href="#awards">Awards</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<img src="your-photo.jpg" alt="Profile">
+<h1>Usama Wahab Khan</h1>
+<p>Microsoft AI MVP | CTO | AI Architect | Global Trainer</p>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About Me</h2>
+<p>
+20+ years of experience in AI, Data Engineering, and Cloud. Delivered enterprise AI solutions and trained 5000+ professionals across 30+ countries including Fortune 500 organizations like Microsoft, Amazon, JPMorgan, and US Navy.
+</p>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+<h2>Impact</h2>
+<div class="counters">
+<div>
+<div class="counter" data-target="600">0</div>
+<p>Trainings</p>
+</div>
+
+<div>
+<div class="counter" data-target="5000">0</div>
+<p>Professionals Trained</p>
+</div>
+
+<div>
+<div class="counter" data-target="30">0</div>
+<p>Countries</p>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Key Projects</h2>
+<div class="grid">
+
+<div class="card">
+<h3>AI Document Intelligence</h3>
+<p>Automated legal contract analysis using GPT + Azure AI Search</p>
+</div>
+
+<div class="card">
+<h3>Portfolio AI Analytics</h3>
+<p>LLM-based investment analytics for real-time insights</p>
+</div>
+
+<div class="card">
+<h3>GIS Pakistan</h3>
+<p>43-layer spatial data warehouse with AI insights</p>
+</div>
+
+<div class="card">
+<h3>Wealth AI Platform</h3>
+<p>AI-driven wealth management for Bahrain banking sector</p>
+</div>
+
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certs">
+<h2>Certifications</h2>
+<div class="logos">
+
+<img src="https://img.icons8.com/color/96/microsoft.png"/>
+<img src="https://img.icons8.com/color/96/azure-1.png"/>
+<img src="https://img.icons8.com/color/96/google-cloud.png"/>
+<img src="https://img.icons8.com/color/96/amazon-web-services.png"/>
+
+</div>
+
+<p>Microsoft Certified (AI, Data, Azure Architect, DevOps, Security) + Google + Databricks + MIT Executive Programs</p>
+</section>
+
+<!-- CLIENTS -->
+<section>
+<h2>Global Clients</h2>
+<div class="logos">
+
+<img src="https://logo.clearbit.com/microsoft.com">
+<img src="https://logo.clearbit.com/amazon.com">
+<img src="https://logo.clearbit.com/jpmorganchase.com">
+<img src="https://logo.clearbit.com/att.com">
+
+</div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+<h2>Awards & Recognition</h2>
+<div class="timeline">
+
+<div>
+<h3>Microsoft AI MVP</h3>
+<p>Multiple years recognition</p>
+</div>
+
+<div>
+<h3>AI Leader EMEA</h3>
+<p>Top AI influencer</p>
+</div>
+
+<div>
+<h3>Ignite AI Champion</h3>
+<p>Global AI Hackathon Winner</p>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>Contact: ukhan@evolutiontech.ae</p>
+<p>LinkedIn: usamawahabkhan</p>
+</footer>
+
+<script>
+// COUNTER ANIMATION
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+    counter.innerText = '0';
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const c = +counter.innerText;
+
+        const increment = target / 200;
+
+        if(c < target) {
+            counter.innerText = `${Math.ceil(c + increment)}`;
+            setTimeout(updateCounter, 10);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCounter();
 });
 </script>
 
