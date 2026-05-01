@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Omani Investment Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+    .tabs { display: flex; background: #004d40; }
+    .tabs button {
+      flex: 1; padding: 14px; border: none; background: #004d40; color: white;
+      cursor: pointer; font-weight: bold;
+    }
+    .tabs button.active { background: #00796b; }
+    .tab-content { display: none; padding: 20px; }
+    .tab-content.active { display: block; }
+    canvas { max-width: 800px; margin: 20px auto; display: block; }
+  </style>
+</head>
+<body>
+
+<div class="tabs">
+  <button class="tablink active" onclick="openTab(event,'overview')">Portfolio Overview</button>
+  <button class="tablink" onclick="openTab(event,'direct')">Direct Investment</button>
+  <button class="tablink" onclick="openTab(event,'realestate')">Real Estate</button>
+  <button class="tablink" onclick="openTab(event,'public')">Public Market</button>
+  <button class="tablink" onclick="openTab(event,'bonds')">Bonds</button>
+  <button class="tablink" onclick="openTab(event,'islamic')">Islamic Instruments</button>
+</div>
+
+<!-- Portfolio Overview -->
+<div id="overview" class="tab-content active">
+  <h2>Portfolio Overview</h2>
+  <canvas id="overviewChart"></canvas>
+</div>
+
+<!-- Direct Investment -->
+<div id="direct" class="tab-content">
+  <h2>Direct Investment KPIs</h2>
+  <canvas id="directChart"></canvas>
+</div>
+
+<!-- Real Estate -->
+<div id="realestate" class="tab-content">
+  <h2>Real Estate KPIs</h2>
+  <canvas id="realEstateChart"></canvas>
+</div>
+
+<!-- Public Market -->
+<div id="public" class="tab-content">
+  <h2>Public Market KPIs</h2>
+  <canvas id="publicChart"></canvas>
+</div>
+
+<!-- Bonds -->
+<div id="bonds" class="tab-content">
+  <h2>Bonds KPIs</h2>
+  <canvas id="bondsChart"></canvas>
+</div>
+
+<!-- Islamic Instruments -->
+<div id="islamic" class="tab-content">
+  <h2>Islamic Instruments KPIs</h2>
+  <canvas id="islamicChart"></canvas>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  const contents = document.querySelectorAll('.tab-content');
+  const links = document.querySelectorAll('.tablink');
+  contents.forEach(c => c.classList.remove('active'));
+  links.forEach(l => l.classList.remove('active'));
+  document.getElementById(tabName).classList.add('active');
+  evt.currentTarget.classList.add('active');
+}
+
+// Portfolio Overview Pie
+new Chart(document.getElementById('overviewChart'), {
+  type: 'pie',
+  data: {
+    labels: ['Direct Investment','Real Estate','Public Market','Bonds','Islamic Instruments'],
+    datasets: [{ data: [25,20,30,15,10], backgroundColor: ['#00796b','#43a047','#1e88e5','#fbc02d','#8e24aa'] }]
+  }
+});
+
+// Direct Investment Bar
+new Chart(document.getElementById('directChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Energy','Logistics','Food','Tech'],
+    datasets: [{ label: 'ROI %', data: [12,8,15,20], backgroundColor: '#00796b' }]
+  }
+});
+
+// Real Estate Line
+new Chart(document.getElementById('realEstateChart'), {
+  type: 'line',
+  data: {
+    labels: ['2021','2022','2023','2024','2025'],
+    datasets: [{ label: 'Rental Yield %', data: [6,6.5,7,7.2,7.5], borderColor: '#43a047', fill: false }]
+  }
+});
+
+// Public Market Line
+new Chart(document.getElementById('publicChart'), {
+  type: 'line',
+  data: {
+    labels: ['MSM30','Banking','Industrial','Services'],
+    datasets: [{ label: 'Index Growth %', data: [5,8,3,6], borderColor: '#1e88e5', fill: false }]
+  }
+});
+
+// Bonds Maturity Ladder
+new Chart(document.getElementById('bondsChart'), {
+  type: 'bar',
+  data: {
+    labels: ['2026','2027','2028','2029','2030'],
+    datasets: [{ label: 'Bond Value (M OMR)', data: [50,70,40,60,30], backgroundColor: '#fbc02d' }]
+  }
+});
+
+// Islamic Instruments
+new Chart(document.getElementById('islamicChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Sukuk A','Sukuk B','Sukuk C'],
+    datasets: [{ label: 'Profit Rate %', data: [4.5,5.2,4.8], backgroundColor: '#8e24aa' }]
+  }
+});
+</script>
+
+</body>
+</html>
